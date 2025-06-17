@@ -1,64 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Nayem IPTV Player</title>
+  <title>Nayem NextGen IPTV Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #eee;
+      margin: 0; padding: 0;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 1rem;
       text-align: center;
-      padding: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #4caf50;
     }
-    select, video {
-      margin-top: 20px;
-    }
-    select {
+    #searchBox {
+      width: 90%;
+      max-width: 600px;
+      margin: 1rem auto;
       padding: 10px;
-      font-size: 16px;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+    #channelList {
+      max-width: 600px;
+      margin: 1rem auto;
+      list-style: none;
+      padding: 0;
+      max-height: 350px;
+      overflow-y: auto;
+      border-radius: 8px;
+      background: #222;
+      box-shadow: 0 0 10px #111;
+    }
+    #channelList li {
+      padding: 12px;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+    }
+    #channelList li:hover {
+      background: #333;
+    }
+    #channelList img {
+      width: 40px;
+      height: 24px;
+      margin-right: 12px;
+      object-fit: contain;
+      border-radius: 4px;
+      background: #000;
+    }
+    #playerContainer {
+      text-align: center;
+      margin: 1rem auto;
+      max-width: 720px;
     }
     video {
-      width: 90%;
-      height: auto;
+      width: 100%;
       max-width: 720px;
-      margin-top: 20px;
-      border: 3px solid #0f0;
       border-radius: 10px;
+      border: 3px solid #4caf50;
+      background: black;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #666;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>📺 Nayem IPTV Player</h1>
 
-  <label for="channelSelect">Choose a channel:</label><br>
-  <select id="channelSelect" onchange="playChannel()">
-    <option value="">-- Select a channel --</option>
-    <option value="https://live.newsuk.tv/bbc-world.m3u8">BBC World (English)</option>
-    <option value="https://zee5live.star.plus/stream/index.m3u8">Star Plus (Hindi)</option>
-    <option value="http://103.145.13.25:1935/atnbd/atnbd/playlist.m3u8">ATN Bangla (BD)</option>
-    <option value="https://kolkata.jalsha.tv/live/index.m3u8">Star Jalsha (Kolkata)</option>
-    <option value="https://sports.sonyliv.com/sonyten1.m3u8">Sony Ten 1 (Sports)</option>
-    <option value="https://ary.zindagitv.com/live/ary.m3u8">ARY Digital (Pak)</option>
-    <option value="https://omantv.official.stream/general.m3u8">Oman TV (Oman)</option>
-  </select>
+<header>Nayem NextGen IPTV Player</header>
 
-  <br>
+<input type="text" id="searchBox" placeholder="Search channels..." />
 
-  <video id="player" controls autoplay></video>
+<ul id="channelList">
+  <!-- Channels will load here dynamically -->
+</ul>
 
-  <script>
-    function playChannel() {
-      const player = document.getElementById("player");
-      const url = document.getElementById("channelSelect").value;
-      if (url) {
-        player.src = url;
-        player.play();
-      } else {
-        player.pause();
-        player.removeAttribute('src');
-      }
+<div id="playerContainer">
+  <video id="videoPlayer" controls autoplay playsinline></video>
+</div>
+
+<footer>© 2025 Nayem IPTV | Powered by OpenAI</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+  const video = document.getElementById('videoPlayer');
+  const channelList = document.getElementById('channelList');
+  const searchBox = document.getElementById('searchBox');
+  let hls;
+
+  // Example channel JSON data (you can move this to channels.json and load via fetch)
+  const channels = [
+    {
+      "name": "BBC World",
+      "url": "https://tv.iptv-ua.live/live/1125.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/BBC_World_News_logo.svg/320px-BBC_World_News_logo.svg.png"
+    },
+    {
+      "name": "CNN News",
+      "url": "https://dai.google.com/linear/hls/event/Ut4eRtsQRjSWhuqSo9SB3w/master.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg"
+    },
+    {
+      "name": "ATN Bangla",
+      "url": "http://103.145.13.25:1935/atnbd/atnbd/playlist.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/ATN_Bangla_Logo.svg/320px-ATN_Bangla_Logo.svg.png"
+    },
+    {
+      "name": "Star Jalsha",
+      "url": "https://kolkata.jalsha.tv/live/index.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Star_Jalsha_logo.svg/320px-Star_Jalsha_logo.svg.png"
+    },
+    {
+      "name": "Sony Ten 1",
+      "url": "https://sports.sonyliv.com/sonyten1.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Sony_Ten_1_logo.svg/320px-Sony_Ten_1_logo.svg.png"
+    },
+    {
+      "name": "ARY Digital",
+      "url": "https://ary.zindagitv.com/live/ary.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/ARY_Digital_Logo.svg/320px-ARY_Digital_Logo.svg.png"
+    },
+    {
+      "name": "Oman TV",
+      "url": "https://omantv.official.stream/general.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Oman_TV_logo.svg/320px-Oman_TV_logo.svg.png"
     }
-  </script>
+  ];
+
+  function loadChannels(filter = '') {
+    channelList.innerHTML = '';
+    const filteredChannels = channels.filter(ch => ch.name.toLowerCase().includes(filter.toLowerCase()));
+    filteredChannels.forEach(ch => {
+      const li = document.createElement('li');
+      li.innerHTML = `<img src="${ch.logo}" alt="${ch.name} Logo" /> <span>${ch.name}</span>`;
+      li.onclick = () => playChannel(ch.url);
+      channelList.appendChild(li);
+    });
+  }
+
+  function playChannel(url) {
+    if (hls) {
+      hls.destroy();
+      hls = null;
+    }
+    if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = url;
+      video.play();
+    } else if (Hls.isSupported()) {
+      hls = new Hls();
+      hls.loadSource(url);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+    } else {
+      alert('Sorry, your browser does not support HLS playback.');
+    }
+  }
+
+  searchBox.addEventListener('input', () => {
+    loadChannels(searchBox.value);
+  });
+
+  // Initial load
+  loadChannels();
+
+  // Play first channel automatically
+  if (channels.length > 0) {
+    playChannel(channels[0].url);
+  }
+</script>
+
 </body>
 </html>
