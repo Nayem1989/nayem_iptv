@@ -1,117 +1,17 @@
-#EXTM3U
-#EXTINF:-1 group-title="General / Mixed",Global Mix Channel
-http://example.com/mix1.m3u8
-#EXTINF:-1 group-title="General / Mixed (Backup)",Global Mix Channel (Backup)
-http://backup.com/mix1.m3u8
-#EXTINF:-1 group-title="English",BBC News
-http://example.com/bbc.m3u8
-#EXTINF:-1 group-title="English (Backup)",BBC News (Backup)
-http://backup.com/bbc.m3u8
-#EXTINF:-1 group-title="English",CNN
-http://example.com/cnn.m3u8
-#EXTINF:-1 group-title="English (Backup)",CNN (Backup)
-http://backup.com/cnn.m3u8
-#EXTINF:-1 group-title="Hindi",Star Plus
-http://example.com/starplus.m3u8
-#EXTINF:-1 group-title="Hindi (Backup)",Star Plus (Backup)
-http://backup.com/starplus.m3u8
-#EXTINF:-1 group-title="Hindi",Sony TV
-http://example.com/sonytv.m3u8
-#EXTINF:-1 group-title="Hindi (Backup)",Sony TV (Backup)
-http://backup.com/sonytv.m3u8
-#EXTINF:-1 group-title="Bangladeshi",ATN Bangla
-http://example.com/atn.m3u8
-#EXTINF:-1 group-title="Bangladeshi (Backup)",ATN Bangla (Backup)
-http://backup.com/atn.m3u8
-#EXTINF:-1 group-title="Bangladeshi",NTV
-http://example.com/ntv.m3u8
-#EXTINF:-1 group-title="Bangladeshi (Backup)",NTV (Backup)
-http://backup.com/ntv.m3u8
-#EXTINF:-1 group-title="Kolkata",Zee Bangla
-http://example.com/zee.m3u8
-#EXTINF:-1 group-title="Kolkata (Backup)",Zee Bangla (Backup)
-http://backup.com/zee.m3u8
-#EXTINF:-1 group-title="Kolkata",Star Jalsha
-http://example.com/jalsha.m3u8
-#EXTINF:-1 group-title="Kolkata (Backup)",Star Jalsha (Backup)
-http://backup.com/jalsha.m3u8
-#EXTINF:-1 group-title="Sports",Star Sports 1
-http://example.com/star1.m3u8
-#EXTINF:-1 group-title="Sports (Backup)",Star Sports 1 (Backup)
-http://backup.com/star1.m3u8
-#EXTINF:-1 group-title="Sports",T Sports
-http://example.com/tsports.m3u8
-#EXTINF:-1 group-title="Sports (Backup)",T Sports (Backup)
-http://backup.com/tsports.m3u8
-#EXTINF:-1 group-title="Pakistani",ARY Digital
-http://example.com/ary.m3u8
-#EXTINF:-1 group-title="Pakistani (Backup)",ARY Digital (Backup)
-http://backup.com/ary.m3u8
-#EXTINF:-1 group-title="Pakistani",Geo TV
-http://example.com/geo.m3u8
-#EXTINF:-1 group-title="Pakistani (Backup)",Geo TV (Backup)
-http://backup.com/geo.m3u8
-#EXTINF:-1 group-title="Omani",Oman TV General
-http://example.com/oman1.m3u8
-#EXTINF:-1 group-title="Omani (Backup)",Oman TV General (Backup)
-http://backup.com/oman1.m3u8
-#EXTINF:-1 group-title="Omani",Majan TV
-http://example.com/majan.m3u8
-#EXTINF:-1 group-title="Omani (Backup)",Majan TV (Backup)
-#EXTINF: -1, CHANNEL I
-https://itpolly.iptv.digijadoo.net/live/channel_i/playlist.m3u8
-#EXTINF: -1, SOMOY TV
-http://27.147.156.14:1935/Somoy-TV/Somoy-TV.stream/playlist.m3u
-#EXTINF: -1, ATN BANGLA
-http://27.147.156.14:1935/ATN-Bangla/ATN-Bangla.stream/playlist.m3u8
-#EXTINF: -1, EKATTOR TV
-http://27.147.156.14:1935/Ekattor-TV-HD/Ekattor-TV-HD.stream/playlist.m3u8
-http://27.147.156.14:1935/N-TV/N-TV.stream/playlist.m3u8
-#EXTINF: -1, STAR JALSHA
-https://itpolly.iptv.digijadoo.net/live/star_jalsha_hd/playlist.m3u8
-http://27.147.156.14:1935/BTV_NAT/BTV_NAT.stream/playlist.m3u8
-#EXTINF: -1, EKUSHEY TV
-http://27.147.156.14:1935/EkusheyTV/EkusheyTV.stream/playlist.m3u8
-#EXTINF: -1, RTV
-http://27.147.156.14:1935/R-TV/R-TV.stream/playlist.m3u8
-#EXTINF: -1, BANGLA VISION
-http://27.147.156.14:1935/Bangla-Vision/Bangla-Vision.stream/playlist.m3u8
-#EXTINF: -1, BOISHAKHI TV
-http://27.147.156.14:1935/Boishakhi-TV/Boishakhi-TV.stream/playlist.m3u8
-#EXTINF: -1, DESH TV
-http://27.147.156.14:1935/Desh-TV/Desh-TV.stream/playlist.m3u8
-#EXTINF: -1, MY TV
-http://27.147.156.14:1935/MY-TV/MY-TV.stream/playlist.m3u8
-#EXTINF: -1, INDEPENDENT TV
-http://27.147.156.14:1935/Independent-TV/IndependentTV.stream/playlist.m3u8
-#EXTINF: -1, CHANNEL 9
-http://27.147.156.14:1935/Channel-9/Channel-9.stream/playlist.m3u8
-#EXTINF: -1, CHANNEL 24
-http://27.147.156.14:1935/Channel-24/Channel-24.stream/playlist.m3u8
-#EXTINF: -1, GAZI TV
-http://114.31.17.2/channel1/myStream_360p/playlist.m3u8
-#EXTINF: -1, GAZI TV 2
-http://182.48.82.130/channel1/myStream_360p/playlist.m3u8
-#EXTINF: -1, SA TV
-http://27.147.156.14:1935/SA-TV-HD/SA-TV-HD.stream/playlist.m3u8
-#EXTINF: -1, JAMUNA TV
-http://27.147.156.14:1935/Jamuna-TV/Jamuna-TV.stream/playlist.m3u8
-#EXTINF: -1, DEEPTO TV
-http://27.147.156.14:1935/Deepto-TV-HD/Deepto-TV-HD.stream/playlist.m3u8
-#EXTINF: -1, DURUNTO TV
-http://27.147.156.14:1935/Durunto-TV/Duronto-TV.stream/playlist.m3u8
-#EXTINF: -1, MOHONA TV
-http://27.147.156.14:1935/Mohona-TV/Mohona-TV.stream/playlist.m3u8
-#EXTINF: -1, ASIAN TV
-http://27.147.156.14:1935/Asian-TV-HD/Asian-TV.stream/playlist.m3u8
-#EXTINF: -1, BIJOY TV
-http://27.147.156.14:1935/Bijoy-TV/Bijoy-TV.stream/playlist.m3u8
-#EXTINF: -1, DBC NEWS
-http://27.147.156.14:1935/DBC-TV/DBC-TV.stream/playlist.m3u8
-#EXTINF: -1, NEWS 24
-http://27.147.156.14:1935/News24-HD/News24-HD.stream/playlist.m3u8
-#EXTINF: -1, ATN NEWS
-http://27.147.156.14:1935/ATN-News/ATN-News.stream/playlist.m3u8
-#EXTINF: -1, BTV WORLD
-http://27.147.156.14:1935/BTV-WorId/BTV-World.stream/playlist.m3u8
+<!-- HLS.js যুক্ত করা -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
+<video id="iptvPlayer" controls width="100%" height="auto"></video>
+
+<script>
+  var video = document.getElementById('iptvPlayer');
+  var m3uUrl = 'https://iptv-org.github.io/iptv/countries/bd.m3u'; // ✅ আপনি চাইলে এখানে অন্য M3U URL দিতে পারেন
+
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource(m3uUrl);
+    hls.attachMedia(video);
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = m3uUrl;
+  }
+</script>
