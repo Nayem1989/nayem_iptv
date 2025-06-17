@@ -2,54 +2,61 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>NaYeM IPTV Player</title>
+  <title>Nayem IPTV Player</title>
   <style>
     body {
-      background-color: #000;
+      font-family: Arial, sans-serif;
+      background-color: #111;
       color: #fff;
-      font-family: sans-serif;
       text-align: center;
       padding: 20px;
     }
-    video {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      border: 2px solid #00ff99;
-      border-radius: 10px;
-    }
-    input {
-      width: 80%;
-      max-width: 600px;
-      padding: 10px;
+    select, video {
       margin-top: 20px;
     }
-    button {
-      padding: 10px 20px;
-      background-color: #00ff99;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      margin-left: 10px;
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+    video {
+      width: 90%;
+      height: auto;
+      max-width: 720px;
+      margin-top: 20px;
+      border: 3px solid #0f0;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>NaYeM IPTV Web Player</h1>
-  <video id="videoPlayer" controls autoplay></video>
-  <br />
-  <input type="text" id="streamURL" placeholder="Paste M3U8 link here" />
-  <button onclick="playStream()">Play</button>
+  <h1>📺 Nayem IPTV Player</h1>
+
+  <label for="channelSelect">Choose a channel:</label><br>
+  <select id="channelSelect" onchange="playChannel()">
+    <option value="">-- Select a channel --</option>
+    <option value="https://live.newsuk.tv/bbc-world.m3u8">BBC World (English)</option>
+    <option value="https://zee5live.star.plus/stream/index.m3u8">Star Plus (Hindi)</option>
+    <option value="http://103.145.13.25:1935/atnbd/atnbd/playlist.m3u8">ATN Bangla (BD)</option>
+    <option value="https://kolkata.jalsha.tv/live/index.m3u8">Star Jalsha (Kolkata)</option>
+    <option value="https://sports.sonyliv.com/sonyten1.m3u8">Sony Ten 1 (Sports)</option>
+    <option value="https://ary.zindagitv.com/live/ary.m3u8">ARY Digital (Pak)</option>
+    <option value="https://omantv.official.stream/general.m3u8">Oman TV (Oman)</option>
+  </select>
+
+  <br>
+
+  <video id="player" controls autoplay></video>
 
   <script>
-    function playStream() {
-      const url = document.getElementById('streamURL').value;
-      const video = document.getElementById('videoPlayer');
+    function playChannel() {
+      const player = document.getElementById("player");
+      const url = document.getElementById("channelSelect").value;
       if (url) {
-        video.src = url;
-        video.play();
+        player.src = url;
+        player.play();
       } else {
-        alert("Please enter a stream URL!");
+        player.pause();
+        player.removeAttribute('src');
       }
     }
   </script>
