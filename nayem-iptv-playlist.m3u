@@ -1,17 +1,36 @@
-<!-- HLS.js যুক্ত করা -->
+<section class="video-player">
+  <h2>📺 Sony Ten 1 (HD)</h2>
+  <video id="sonyTen1" controls width="100%" height="auto" autoplay></video>
+
+  <select id="sonyTen1Select">
+    <option value="https://example.com/sonyten1/main.m3u8">Main Link</option>
+    <option value="https://backup1.com/sonyten1.m3u8">Backup 1</option>
+    <option value="https://backup2.com/sonyten1.m3u8">Backup 2</option>
+    <option value="https://backup3.com/sonyten1.m3u8">Backup 3</option>
+    <option value="https://backup4.com/sonyten1.m3u8">Backup 4</option>
+  </select>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-<video id="iptvPlayer" controls width="100%" height="auto"></video>
-
 <script>
-  var video = document.getElementById('iptvPlayer');
-  var m3uUrl = 'https://iptv-org.github.io/iptv/countries/bd.m3u'; // ✅ আপনি চাইলে এখানে অন্য M3U URL দিতে পারেন
+  const player = document.getElementById('sonyTen1');
+  const selector = document.getElementById('sonyTen1Select');
 
-  if (Hls.isSupported()) {
-    var hls = new Hls();
-    hls.loadSource(m3uUrl);
-    hls.attachMedia(video);
-  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = m3uUrl;
+  function playStream(url) {
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(url);
+      hls.attachMedia(player);
+    } else if (player.canPlayType('application/vnd.apple.mpegurl')) {
+      player.src = url;
+    }
   }
+
+  // Initial stream load
+  playStream(selector.value);
+
+  // Change stream when option is selected
+  selector.addEventListener('change', function () {
+    playStream(this.value);
+  });
 </script>
