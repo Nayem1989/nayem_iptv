@@ -58,4 +58,60 @@ http://backup.com/oman1.m3u8
 #EXTINF:-1 group-title="Omani",Majan TV
 http://example.com/majan.m3u8
 #EXTINF:-1 group-title="Omani (Backup)",Majan TV (Backup)
-http://backup.com/majan.m3u8
+#EXTINF: -1, CHANNEL I
+https://itpolly.iptv.digijadoo.net/live/channel_i/playlist.m3u8
+#EXTINF: -1, SOMOY TV
+http://27.147.156.14:1935/Somoy-TV/Somoy-TV.stream/playlist.m3u
+#EXTINF: -1, ATN BANGLA
+http://27.147.156.14:1935/ATN-Bangla/ATN-Bangla.stream/playlist.m3u8
+#EXTINF: -1, EKATTOR TV
+http://27.147.156.14:1935/Ekattor-TV-HD/Ekattor-TV-HD.stream/playlist.m3u8
+http://27.147.156.14:1935/N-TV/N-TV.stream/playlist.m3u8
+#EXTINF: -1, STAR JALSHA
+https://itpolly.iptv.digijadoo.net/live/star_jalsha_hd/playlist.m3u8
+http://27.147.156.14:1935/BTV_NAT/BTV_NAT.stream/playlist.m3u8
+#EXTINF: -1, EKUSHEY TV
+http://27.147.156.14:1935/EkusheyTV/EkusheyTV.stream/playlist.m3u8
+#EXTINF: -1, RTV
+http://27.147.156.14:1935/R-TV/R-TV.stream/playlist.m3u8
+#EXTINF: -1, BANGLA VISION
+http://27.147.156.14:1935/Bangla-Vision/Bangla-Vision.stream/playlist.m3u8
+#EXTINF: -1, BOISHAKHI TV
+http://27.147.156.14:1935/Boishakhi-TV/Boishakhi-TV.stream/playlist.m3u8
+#EXTINF: -1, DESH TV
+http://27.147.156.14:1935/Desh-TV/Desh-TV.stream/playlist.m3u8
+#EXTINF: -1, MY TV
+http://27.147.156.14:1935/MY-TV/MY-TV.stream/playlist.m3u8
+#EXTINF: -1, INDEPENDENT TV
+http://27.147.156.14:1935/Independent-TV/IndependentTV.stream/playlist.m3u8
+#EXTINF: -1, CHANNEL 9
+http://27.147.156.14:1935/Channel-9/Channel-9.stream/playlist.m3u8
+#EXTINF: -1, CHANNEL 24
+http://27.147.156.14:1935/Channel-24/Channel-24.stream/playlist.m3u8
+#EXTINF: -1, GAZI TV
+http://114.31.17.2/channel1/myStream_360p/playlist.m3u8
+#EXTINF: -1, GAZI TV 2
+http://182.48.82.130/channel1/myStream_360p/playlist.m3u8
+#EXTINF: -1, SA TV
+http://27.147.156.14:1935/SA-TV-HD/SA-TV-HD.stream/playlist.m3u8
+#EXTINF: -1, JAMUNA TV
+http://27.147.156.14:1935/Jamuna-TV/Jamuna-TV.stream/playlist.m3u8
+#EXTINF: -1, DEEPTO TV
+http://27.147.156.14:1935/Deepto-TV-HD/Deepto-TV-HD.stream/playlist.m3u8
+#EXTINF: -1, DURUNTO TV
+http://27.147.156.14:1935/Durunto-TV/Duronto-TV.stream/playlist.m3u8
+#EXTINF: -1, MOHONA TV
+http://27.147.156.14:1935/Mohona-TV/Mohona-TV.stream/playlist.m3u8
+#EXTINF: -1, ASIAN TV
+http://27.147.156.14:1935/Asian-TV-HD/Asian-TV.stream/playlist.m3u8
+#EXTINF: -1, BIJOY TV
+http://27.147.156.14:1935/Bijoy-TV/Bijoy-TV.stream/playlist.m3u8
+#EXTINF: -1, DBC NEWS
+http://27.147.156.14:1935/DBC-TV/DBC-TV.stream/playlist.m3u8
+#EXTINF: -1, NEWS 24
+http://27.147.156.14:1935/News24-HD/News24-HD.stream/playlist.m3u8
+#EXTINF: -1, ATN NEWS
+http://27.147.156.14:1935/ATN-News/ATN-News.stream/playlist.m3u8
+#EXTINF: -1, BTV WORLD
+http://27.147.156.14:1935/BTV-WorId/BTV-World.stream/playlist.m3u8
+
