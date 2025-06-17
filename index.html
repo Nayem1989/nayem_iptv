@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nayem IPTV Player</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    video {
+      width: 90%;
+      max-width: 720px;
+      border: 3px solid #00ffcc;
+      border-radius: 10px;
+    }
+    select, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 15px;
+      border-radius: 5px;
+      border: none;
+    }
+    select {
+      width: 60%;
+    }
+    button {
+      background-color: #00ffcc;
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nayem IPTV Player</h1>
+
+  <video id="video" controls autoplay></video><br>
+
+  <select id="channelList">
+    <option value="">📺 -- Select a Channel --</option>
+    <option value="http://example.com/bbc.m3u8">BBC News</option>
+    <option value="http://backup.com/bbc.m3u8">BBC News (Backup)</option>
+    <option value="http://example.com/cnn.m3u8">CNN</option>
+    <option value="http://example.com/starplus.m3u8">Star Plus</option>
+    <option value="http://backup.com/starplus.m3u8">Star Plus (Backup)</option>
+    <option value="http://example.com/atn.m3u8">ATN Bangla</option>
+    <option value="http://backup.com/atn.m3u8">ATN Bangla (Backup)</option>
+    <option value="http://example.com/star1.m3u8">Star Sports 1</option>
+    <option value="http://example.com/tsports.m3u8">T Sports</option>
+    <option value="http://example.com/oman1.m3u8">Oman TV General</option>
+    <option value="http://backup.com/oman1.m3u8">Oman TV (Backup)</option>
+  </select>
+
+  <button onclick="playSelected()">▶️ Play</button>
+
+  <script>
+    function playSelected() {
+      const video = document.getElementById('video');
+      const url = document.getElementById('channelList').value;
+
+      if (!url) {
+        alert("Please select a channel.");
+        return;
+      }
+
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+          video.play();
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.addEventListener('loadedmetadata', function () {
+          video.play();
+        });
+      } else {
+        alert("Your browser doesn't support M3U8 playback.");
+      }
+    }
+  </script>
+</body>
+</html>

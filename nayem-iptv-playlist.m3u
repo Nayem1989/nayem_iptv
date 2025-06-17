@@ -1,0 +1,69 @@
+#EXTM3U
+#EXTINF:-1 group-title="General / Mixed",Global Mix Channel
+http://example.com/mix1.m3u8
+#EXTINF:-1 group-title="General / Mixed (Backup)",Global Mix Channel (Backup)
+http://backup.com/mix1.m3u8
+
+#EXTINF:-1 group-title="English",BBC News
+http://example.com/bbc.m3u8
+#EXTINF:-1 group-title="English (Backup)",BBC News (Backup)
+http://backup.com/bbc.m3u8
+
+#EXTINF:-1 group-title="English",CNN
+http://example.com/cnn.m3u8
+#EXTINF:-1 group-title="Hindi",Star Plus
+http://example.com/starplus.m3u8
+#EXTINF:-1 group-title="Hindi (Backup)",Star Plus (Backup)
+http://backup.com/starplus.m3u8
+
+#EXTINF:-1 group-title="Hindi",Sony TV
+http://example.com/sonytv.m3u8
+#EXTINF:-1 group-title="Bangladeshi",ATN Bangla
+http://example.com/atn.m3u8
+#EXTINF:-1 group-title="Bangladeshi (Backup)",ATN Bangla (Backup)
+http://backup.com/atn.m3u8
+
+#EXTINF:-1 group-title="Bangladeshi",NTV
+http://example.com/ntv.m3u8
+#EXTINF:-1 group-title="Bangladeshi (Backup)",NTV (Backup)
+http://backup.com/ntv.m3u8
+
+#EXTINF:-1 group-title="Kolkata",Zee Bangla
+http://example.com/zee.m3u8
+#EXTINF:-1 group-title="Kolkata (Backup)",Zee Bangla (Backup)
+http://backup.com/zee.m3u8
+
+#EXTINF:-1 group-title="Kolkata",Star Jalsha
+http://example.com/jalsha.m3u8
+#EXTINF:-1 group-title="Kolkata (Backup)",Star Jalsha (Backup)
+http://backup.com/jalsha.m3u8
+
+#EXTINF:-1 group-title="Sports",Star Sports 1
+http://example.com/star1.m3u8
+#EXTINF:-1 group-title="Sports (Backup)",Star Sports 1 (Backup)
+http://backup.com/star1.m3u8
+
+#EXTINF:-1 group-title="Sports",T Sports
+http://example.com/tsports.m3u8
+#EXTINF:-1 group-title="Sports (Backup)",T Sports (Backup)
+http://backup.com/tsports.m3u8
+
+#EXTINF:-1 group-title="Pakistani",ARY Digital
+http://example.com/ary.m3u8
+#EXTINF:-1 group-title="Pakistani (Backup)",ARY Digital (Backup)
+http://backup.com/ary.m3u8
+
+#EXTINF:-1 group-title="Pakistani",Geo TV
+http://example.com/geo.m3u8
+#EXTINF:-1 group-title="Pakistani (Backup)",Geo TV (Backup)
+http://backup.com/geo.m3u8
+
+#EXTINF:-1 group-title="Omani",Oman TV General
+http://example.com/oman1.m3u8
+#EXTINF:-1 group-title="Omani (Backup)",Oman TV General (Backup)
+http://backup.com/oman1.m3u8
+
+#EXTINF:-1 group-title="Omani",Majan TV
+http://example.com/majan.m3u8
+#EXTINF:-1 group-title="Omani (Backup)",Majan TV (Backup)
+http://backup.com/majan.m3u8
