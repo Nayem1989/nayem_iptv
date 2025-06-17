@@ -1,36 +1,22 @@
-<section class="video-player">
-  <h2>📺 Sony Ten 1 (HD)</h2>
-  <video id="sonyTen1" controls width="100%" height="auto" autoplay></video>
+#EXTM3U
 
-  <select id="sonyTen1Select">
-    <option value="https://example.com/sonyten1/main.m3u8">Main Link</option>
-    <option value="https://backup1.com/sonyten1.m3u8">Backup 1</option>
-    <option value="https://backup2.com/sonyten1.m3u8">Backup 2</option>
-    <option value="https://backup3.com/sonyten1.m3u8">Backup 3</option>
-    <option value="https://backup4.com/sonyten1.m3u8">Backup 4</option>
-  </select>
-</section>
+#EXTINF:-1 tvg-id="atnbangla" tvg-name="ATN Bangla" tvg-logo="https://upload.wikimedia.org/wikipedia/en/4/4b/ATN_Bangla.png",ATN Bangla
+http://103.145.13.25:1935/atnbd/atnbd/playlist.m3u8
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script>
-  const player = document.getElementById('sonyTen1');
-  const selector = document.getElementById('sonyTen1Select');
+#EXTINF:-1 tvg-id="ntv" tvg-name="NTV Bangladesh" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/NTV_Bangladesh_logo.svg/1200px-NTV_Bangladesh_logo.svg.png",NTV Bangladesh
+http://103.145.13.25:1935/ntv/ntv/playlist.m3u8
 
-  function playStream(url) {
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(url);
-      hls.attachMedia(player);
-    } else if (player.canPlayType('application/vnd.apple.mpegurl')) {
-      player.src = url;
-    }
-  }
+#EXTINF:-1 tvg-id="somoytv" tvg-name="Somoy TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/5/5c/Somoy_TV_logo.png",Somoy TV
+http://103.145.13.25:1935/somoy/somoy/playlist.m3u8
 
-  // Initial stream load
-  playStream(selector.value);
+#EXTINF:-1 tvg-id="starplus" tvg-name="Star Plus" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Star_Plus_Logo.svg/1200px-Star_Plus_Logo.svg.png",Star Plus
+https://starplus-live.stream/live/stream.m3u8
 
-  // Change stream when option is selected
-  selector.addEventListener('change', function () {
-    playStream(this.value);
-  });
-</script>
+#EXTINF:-1 tvg-id="bbcworld" tvg-name="BBC World News" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/04/BBC_News_2022.svg",BBC World News
+https://bbcfsproxy-i.akamaihd.net/hls/live/2022314/bbc_world_news/uk/bbc_world_news.m3u8
+
+#EXTINF:-1 tvg-id="cnn" tvg-name="CNN" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg",CNN
+https://cnn-cnninternational-1-generic-vh.akamaihd.net/i/cnn_1@264688/master.m3u8
+
+#EXTINF:-1 tvg-id="sonyten1" tvg-name="Sony Ten 1" tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e3/Sony_Ten_logo.png",Sony Ten 1
+https://sports.sonyliv.com/sonyten1.m3u8
