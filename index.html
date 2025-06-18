@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>NaYeM IPTV</title>
+  <link rel="icon" href="logo.png">
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #111; color: #fff; text-align: center; padding: 20px; }
+    video { width: 90%; max-width: 800px; height: auto; margin-top: 20px; border: 2px solid #444; }
+    select { padding: 10px; margin-top: 20px; font-size: 16px; border-radius: 5px; }
+    .footer { margin-top: 30px; font-size: 14px; color: #aaa; }
+    .logo { max-width: 200px; margin: 10px auto; }
+  </style>
+</head>
+<body>
+  <img class="logo" src="logo.png" alt="NaYeM IPTV Logo">
+  <h1>📺 NaYeM IPTV</h1>
+  <select id="channelSelect" onchange="playChannel()">
+    <option value="">📡 Select a Channel</option>
+    <option value="https://example.com/channel1.m3u8">Channel 1</option>
+    <option value="https://example.com/channel2.m3u8">Channel 2</option>
+    <option value="https://example.com/channel3.m3u8">Channel 3</option>
+  </select>
+  <video id="videoPlayer" controls autoplay></video>
+  <div class="footer">
+    📞 Contact: +96879427983<br>
+    💬 WhatsApp & Telegram: <a href="https://t.me/Ctgna" style="color: #00ffff;">t.me/Ctgna</a>
+  </div>
+  <script>
+    function playChannel() {
+      var url = document.getElementById("channelSelect").value;
+      var player = document.getElementById("videoPlayer");
+      if (url) {
+        player.src = url;
+        player.play();
+      }
+    }
+  </script>
+</body>
+</html>
